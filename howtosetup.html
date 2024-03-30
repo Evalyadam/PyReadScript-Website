@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyReadScript - How to Setup</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <a href="index.html">Go back to main page.</a>
+    <script src="script.js"></script>
+    <div class="cursor" datacursordot></div>
+    <div class="cursor_outline" datacursoroutline></div>
+
+    <div class="Header">
+    <h1 id="center">- How to Setup -</h1>
+    <p>The Basics</p>
+    <br><br>
+    <hr>
+</div>
+
+    <br><br>
+    <p>First off, download the file.</p>
+    <button onclick="downloadPyreadscript()">Download The pyreadscript Python file.</button>
+
+    <script>
+        function downloadPyreadscript() {
+            var url = 'https://raw.githubusercontent.com/Evalyadam/Py-Read-Script/main/pyreadscript.py';
+            var filename = 'pyreadscript.py';
+            fetch(url)
+                .then(response => response.text())
+                .then(text => {
+                    var element = document.createElement('a');
+                    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+                    element.setAttribute('download', filename);
+
+                    element.style.display = 'none';
+                    document.body.appendChild(element);
+
+                    element.click();
+
+                    document.body.removeChild(element);
+                });
+        }
+    </script>
+    <p><a href="https://raw.githubusercontent.com/Evalyadam/Py-Read-Script/main/pyreadscript.py" target="_blank">Click here to view file content. </a></p>
+    
+    <p id="center"><mark>(Important!) Put the pyreadscript.py file into the same directory as your project, its highly recommended to make a different name other than pyreadscript.py for the main file.</mark></p>
+    <br><br><hr>
+    <h2 id="center">- Importing -</h2>
+    <br>
+    <p>In your main project file:</p>
+    <snippet><blue>import</blue> <orangish>pyreadscript</orangish> <blue>as</blue> <orangish>prs</orangish></snippet>
+    <br><br>
+    <p>Now, you can use PyReadScript in your projects.</p>
+</body>
+</html>

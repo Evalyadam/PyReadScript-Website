@@ -1,0 +1,89 @@
+body{
+    background-color: rgb(6, 1, 30);
+}
+
+h2, h3, h4, h5, h6, p, pre, blockquote, q, blockquote, nav, section, a, snippet{
+    font-family: monospace, serif;
+    color: whitesmoke;
+}
+
+h1{
+    font-family: monospace, serif;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.Header{
+    text-align: center;
+    filter: drop-shadow(30px black);
+    
+}
+
+code{
+    background-color: black;
+}
+
+#center{
+    text-align: center;
+}
+
+.cursor{
+    background-color: azure;
+    height: 8px;
+    width: 8px;
+}
+
+.cursor_outline{
+    height: 30px;
+    width: 30px;
+    border: 2px solid whitesmoke;
+}
+
+.cursor,
+.cursor_outline{
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+* {
+    cursor: none;
+}
+
+button{
+    background-color: black;
+    color: aqua;
+}
+
+mark{
+    background-color: cadetblue;
+}
+
+hr{
+    height: 10px;
+    margin-left: 0%;
+    margin-right: 0%;
+    color: #111111;
+}
+
+snippet{
+    background-color: #111111;
+    border: 3px;
+    border-color: black;
+    border-radius: 30%;
+    color: azure;
+    height: 7px;
+    width: 7px;
+}
+
+blue{
+    color: blue;
+}
+
+orangish{
+    color: rgb(255, 183, 50);
+}
